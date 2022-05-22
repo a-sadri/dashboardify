@@ -56,7 +56,9 @@ function App() {
           <div
             className={`
           dark:bg-main-bg bg-main-bg min-h-screen w-full ${
-            activeMenu ? 'md:ml-72' : 'flex-2'
+            activeMenu
+              ? 'dark:bg-main-dark-bg bg-main-bg min-h-screen md:ml-72 w-full'
+              : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2'
           }
           `}
           >
@@ -92,6 +94,7 @@ function App() {
               <Route path='/stacked' element={<Stacked />} />
             </Routes>
           </div>
+          <Footer />
         </div>
       </BrowserRouter>
     </div>
